@@ -1,19 +1,19 @@
 import SpriteKit
 
 enum Animation {
-    func move(time: Double, valor: Double = 0) -> SKAction {
+    func move(time: Double, displacementX: Double = 0) -> SKAction {
         switch self {
         case .leftByRightOnePosition:
-            let result = SKAction.move(by: CGVector(dx: valor, dy: 0) , duration: time)
+            let result = SKAction.move(by: CGVector(dx: displacementX, dy: 0) , duration: time)
             return result
         case .leftByRightTwoPositions:
-            let result = SKAction.move(by: CGVector(dx: valor * 2, dy: 0) , duration: time)
+            let result = SKAction.move(by: CGVector(dx: displacementX * 2, dy: 0) , duration: time)
             return result
         case .rightByLeftOnePosition:
-            let result = SKAction.move(by: CGVector(dx: -valor, dy: 0) , duration: time)
+            let result = SKAction.move(by: CGVector(dx: -displacementX, dy: 0) , duration: time)
             return result
         case .rightByLeftTwoPositions:
-            let result = SKAction.move(by: CGVector(dx: -valor * 2, dy: 0) , duration: time)
+            let result = SKAction.move(by: CGVector(dx: -displacementX * 2, dy: 0) , duration: time)
             return result
         case .contract:
             let move1 = SKAction.scale(by: 0.8, duration: time/2)
