@@ -2,7 +2,7 @@ import SpriteKit
 import SwiftUI
 
 class BoxGame: SKScene {
-    var ball: SKShapeNode = SKShapeNode(circleOfRadius: 20)
+    public var ball: SKShapeNode = SKShapeNode(circleOfRadius: 20)
     var copo1: SKShapeNode = SKShapeNode(rectOf: CGSize(width: 60, height: 120))
     var copo2: SKShapeNode = SKShapeNode(rectOf: CGSize(width: 60, height: 120))
     var copo3: SKShapeNode = SKShapeNode(rectOf: CGSize(width: 60, height: 120))
